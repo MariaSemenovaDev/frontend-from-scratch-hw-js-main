@@ -15,3 +15,10 @@ while(n > 0) {
 }
 console.log(factorial);
 
+// let n = 1
+// let factorial = 1
+// while(n <= 10) {
+//   factorial *= n
+//   n ++
+// }
+// console.log(factorial)
