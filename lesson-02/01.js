@@ -17,7 +17,7 @@ let isAccess
 
 // your code
 
-if((isAdmin|| isVerifiedUser) && (hasSpecialPermission|| hasSpecialPermission)){
+if((isAdmin || isVerifiedUser) && (hasSpecialPermission || hasSpecialPermission)){
     isAccess = true
 } else {
     isAccess = false
