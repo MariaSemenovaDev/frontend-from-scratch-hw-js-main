@@ -14,20 +14,23 @@ const game = {
   resources: {
     gold: 250,
     lumber: 100,
+
   },
   addResource(resource, amount) {
-    
-    if(resource === 'gold') {
-      this.resources.gold = this.resources.gold + amount
-      return this.resources.gold
-    } if(resource === 'lumber'){
-      this.resources.lumber = this.resources.lumber + amount
-      return this.resources.lumber
-      } else {
-        console.log("Invalid resource");
-        return "Invalid resource"
+    for (const key in this.resources) {
+
+      if(resource === key) {
+
+        this.resources[key] = this.resources[key] + amount
+        return this.resources[key]
+
+        } else {
+          console.log("Invalid resource");
+          // return "Invalid resource"
+        }
+      
       }
     }
-  }
+    }
 
-// console.log(game.addResource('goldff', 50));
+// console.log(game.addResource('cat', 5));
