@@ -22,6 +22,7 @@ const game = {
         this.resources[key] += amount
         return this.resources[key]
       } else {
+        console.log("Invalid resource");
         return "Invalid resource"
       }
     }
