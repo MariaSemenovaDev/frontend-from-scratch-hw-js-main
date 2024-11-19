@@ -28,6 +28,7 @@ console.log(gallery)
   'The Persistence of Memory': 'Salvador Dali'
 }
 */
+// Решение:
 
 const gallery = {
   'Mona Lisa': 'Leonardo da Vinci',
@@ -46,5 +47,5 @@ function updateGallery(object, name, newInfo) {
   }
 }
 
-updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506')
-console.log(gallery);
+// updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506')
+// console.log(gallery);

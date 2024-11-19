@@ -9,4 +9,4 @@ while (number <= 20) {
     sum = sum + number
     number ++
 }
-console.log(sum);
+// console.log(sum);

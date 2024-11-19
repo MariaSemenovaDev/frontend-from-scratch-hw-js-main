@@ -21,5 +21,5 @@ function includesElement(array, element) {
     }
     return false
 }
-const result = includesElement([1, 2, 3], 2)
-console.log(result);
+// const result = includesElement([1, 2, 3], 2)
+// console.log(result);

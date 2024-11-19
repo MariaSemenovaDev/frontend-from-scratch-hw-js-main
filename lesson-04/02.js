@@ -22,7 +22,7 @@ function findUniqueElements(array) {
      return uniqueElements
 }
 
-console.log(findUniqueElements([1, 2, 3, 2, 1, 4]));
+// console.log(findUniqueElements([1, 2, 3, 2, 1, 4]));
 
 
     

@@ -18,33 +18,29 @@ const WEB_TECH_IMAGES = [
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg',
 ]
 
-//находим элементы
-const buttonPrev = document.getElementById('prev-button')
-console.log(buttonPrev);
 
-const buttonNext = document.getElementById('next-button')
-console.log(buttonNext);
+//находим эти элементы
+const prevButton = document.getElementById('prev-button')
+
+const nextButton = document.getElementById('next-button')
 
 const webTechImage = document.getElementById('web-tech-image')
-console.log(webTechImage);
 
-let currentIndex = 0;
+//событие:
+let currentIndex = 0
 
-buttonPrev.addEventListener('click', () => {
-  currentIndex++; // Увеличиваем индекс
-  if (currentIndex >= WEB_TECH_IMAGES.length) { // Если вышли за пределы массива
-      currentIndex = 0; // Возвращаемся к началу
-  }
+prevButton.addEventListener('click', () => {
+    currentIndex++
+    if(currentIndex >= WEB_TECH_IMAGES.length) {
+      currentIndex = 0
+    }
   webTechImage.setAttribute('src', WEB_TECH_IMAGES[currentIndex]);
-});
+})
 
-buttonNext.addEventListener('click', () => {
-  currentIndex--; // Уменьшаем индекс
-  if (currentIndex < 0) { // Если индекс стал меньше 0
-      currentIndex = WEB_TECH_IMAGES.length - 1; // Переходим к последней картинке
-  }
-  webTechImage.setAttribute('src', WEB_TECH_IMAGES[currentIndex]);
-});
-
-
-
+nextButton.addEventListener('click', () => {
+  currentIndex--
+  if(currentIndex < 0) {
+      currentIndex = WEB_TECH_IMAGES.length - 1
+    }
+  webTechImage.setAttribute('src', WEB_TECH_IMAGES[currentIndex])
+})

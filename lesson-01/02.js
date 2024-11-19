@@ -13,7 +13,7 @@ while(n > 0) {
   factorial = factorial * n
   n --
 }
-console.log(factorial);
+// console.log(factorial);
 
 // let n = 1
 // let factorial = 1
