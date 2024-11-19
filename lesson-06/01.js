@@ -20,31 +20,62 @@ const WEB_TECH_IMAGES = [
 
 //находим элементы
 const buttonPrev = document.getElementById('prev-button')
-console.log(buttonPrev);
+// console.log(buttonPrev);
 
 const buttonNext = document.getElementById('next-button')
-console.log(buttonNext);
+// console.log(buttonNext);
 
 const webTechImage = document.getElementById('web-tech-image')
-console.log(webTechImage);
+// console.log(webTechImage);
+
+// let currentIndex = 0;
+
+// buttonPrev.addEventListener('click', () => {
+//   currentIndex++; // Увеличиваем индекс
+//   if (currentIndex >= WEB_TECH_IMAGES.length) { // Если вышли за пределы массива
+//       currentIndex = 0; // Возвращаемся к началу
+//   }
+//   webTechImage.setAttribute('src', WEB_TECH_IMAGES[currentIndex]);
+// });
+
+// buttonNext.addEventListener('click', () => {
+//   currentIndex--; // Уменьшаем индекс
+//   if (currentIndex < 0) { // Если индекс стал меньше 0
+//       currentIndex = WEB_TECH_IMAGES.length - 1; // Переходим к последней картинке
+//   }
+//   webTechImage.setAttribute('src', WEB_TECH_IMAGES[currentIndex]);
+// });
+
+
+//второй вариант
 
 let currentIndex = 0;
 
-buttonPrev.addEventListener('click', () => {
-  currentIndex++; // Увеличиваем индекс
-  if (currentIndex >= WEB_TECH_IMAGES.length) { // Если вышли за пределы массива
-      currentIndex = 0; // Возвращаемся к началу
+// функция для обновления картинки
+function updateImage() {
+  webTechImage.src = WEB_TECH_IMAGES[currentIndex];
+}
+
+// событие на кнопку "вперед"
+buttonNext.addEventListener('click', () => {
+  currentIndex++; // увеличиваем индекс
+  if (currentIndex >= WEB_TECH_IMAGES.length) {
+    currentIndex = 0; // если индекс выходит за пределы массива, возвращаем его в начало
   }
-  webTechImage.setAttribute('src', WEB_TECH_IMAGES[currentIndex]);
+  updateImage(); // обновляем картинку
 });
 
-buttonNext.addEventListener('click', () => {
-  currentIndex--; // Уменьшаем индекс
-  if (currentIndex < 0) { // Если индекс стал меньше 0
-      currentIndex = WEB_TECH_IMAGES.length - 1; // Переходим к последней картинке
+// событие на кнопку "назад"
+buttonPrev.addEventListener('click', () => {
+  currentIndex--; // уменьшаем индекс
+  if (currentIndex < 0) {
+    currentIndex = WEB_TECH_IMAGES.length - 1; // если индекс меньше 0, возвращаем его на последнюю картинку
   }
-  webTechImage.setAttribute('src', WEB_TECH_IMAGES[currentIndex]);
+  updateImage(); // обновляем картинку
 });
+
+// первоначальная загрузка картинки
+updateImage();
 
 
 
