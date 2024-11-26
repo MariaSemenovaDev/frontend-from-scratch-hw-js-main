@@ -28,32 +28,12 @@ const buttonNext = document.getElementById('next-button')
 const webTechImage = document.getElementById('web-tech-image')
 // console.log(webTechImage);
 
-// let currentIndex = 0;
-
-// buttonPrev.addEventListener('click', () => {
-//   currentIndex++; // Увеличиваем индекс
-//   if (currentIndex >= WEB_TECH_IMAGES.length) { // Если вышли за пределы массива
-//       currentIndex = 0; // Возвращаемся к началу
-//   }
-//   webTechImage.setAttribute('src', WEB_TECH_IMAGES[currentIndex]);
-// });
-
-// buttonNext.addEventListener('click', () => {
-//   currentIndex--; // Уменьшаем индекс
-//   if (currentIndex < 0) { // Если индекс стал меньше 0
-//       currentIndex = WEB_TECH_IMAGES.length - 1; // Переходим к последней картинке
-//   }
-//   webTechImage.setAttribute('src', WEB_TECH_IMAGES[currentIndex]);
-// });
-
-
-//второй вариант
 
 let currentIndex = 0;
 
 // функция для обновления картинки
 function updateImage() {
-  webTechImage.src = WEB_TECH_IMAGES[currentIndex];
+  webTechImage.setAttribute('src', WEB_TECH_IMAGES[currentIndex])
 }
 
 // событие на кнопку "вперед"

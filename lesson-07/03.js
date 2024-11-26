@@ -9,6 +9,15 @@
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
 
+
 function truncate(str, maxLength) {
-  // your code
+  const arrStr = str.split('')
+  const newArr = arrStr.slice(0, maxLength)
+  const endArr = newArr.join("")
+  return `${endArr}...`
 }
+console.log(truncate("Вот, что мне действительно нравится в этом", 8));
+
+//split - разрезать на отдельные символы (у каждого свой индекс)
+//splice(start, end)
+//join
