@@ -11,8 +11,9 @@ function capitalizeWords(str) {
 for (let i = 0; i < array.length; i++) {
     array[i] = array[i][0].toUpperCase() + array[i].slice(1)
 }
-return array
+
+return array.join(" ")
 }
 
-console.log(capitalizeWords("hello world from javascript"));
+console.log(capitalizeWords("a"));
 
