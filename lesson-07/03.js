@@ -11,13 +11,13 @@
 
 
 function truncate(str, maxLength) {
-  const arrStr = str.split('')
-  const newArr = arrStr.slice(0, maxLength)
-  const endArr = newArr.join("")
-  return `${endArr}...`
+  const arrStr = str.split('')//создали массив с отдельным символом
+  if(arrStr.length <= maxLength){
+    return str
+  } else {
+    const newArr = arrStr.slice(0, maxLength)//создали копию массива укороченную
+    const newStr = newArr.join("")
+    return `${newStr}...`
+  }
 }
-console.log(truncate("Вот, что мне действительно нравится в этом", 8));
-
-//split - разрезать на отдельные символы (у каждого свой индекс)
-//splice(start, end)
-//join
+console.log(truncate("Вот, что мне действительно нравится в этом", 20, 10));
