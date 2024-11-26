@@ -20,4 +20,4 @@ function truncate(str, maxLength) {
     return `${newStr}...`
   }
 }
-console.log(truncate("Вот, что мне действительно нравится в этом", 20, 10));
+// console.log(truncate("Вот, что мне действительно нравится в этом", 20, 10));
