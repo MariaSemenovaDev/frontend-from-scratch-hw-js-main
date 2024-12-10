@@ -14,21 +14,69 @@ const game = {
   resources: {
     gold: 250,
     lumber: 100,
-
   },
-  addResource(resource, amount) {
-    for (const key in this.resources) {
-
-      if(resource === key) {
-
-        this.resources[key] = this.resources[key] + amount
+  addResource(resource, amount){
+    for(const key in this.resources){
+      if(key === resource){
+        this.resources[key] += amount
         return this.resources[key]
-
-        }
-
       }
       console.log("Invalid resource");
+      
     }
   }
+}
 
-// console.log(game.addResource('cat', 5));
+console.log(addResource(gold, 30));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const game = {
+//   resources: {
+//     gold: 250,
+//     lumber: 100,
+
+//   },
+//   addResource(resource, amount) {
+//     for (const key in this.resources) {
+
+//       if(resource === key) {
+
+//         this.resources[key] = this.resources[key] + amount
+//         return this.resources[key]
+
+//         }
+
+//       }
+//       console.log("Invalid resource");
+//     }
+//   }
+
+// // console.log(game.addResource('cat', 5));
