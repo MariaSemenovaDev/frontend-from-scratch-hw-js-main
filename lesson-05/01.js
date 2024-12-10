@@ -27,7 +27,7 @@ const game = {
   }
 }
 
-console.log(addResource(gold, 30));
+// console.log(addResource(gold, 30));
 
 
 
