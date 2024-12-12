@@ -79,7 +79,7 @@ petShop.addEventListener('click', function (event) {
   }
 
   if (targetElement.classList.contains('pet')) {
-    const clickedPetId = targetElement.id; // Получаем id нажатой кнопки
+    const clickedPetId = targetElement.id; // Получаем id нажатой кнопки (только тут запросила подсказку)
     cart.push(clickedPetId) // Находим соответствующий объект питомца
     updateCartDisplay()
   }
