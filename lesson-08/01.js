@@ -29,7 +29,7 @@ const PETS = [
   { id: 'frog', title: '🐸' },
 ]
 
-const cart = []
+const cart = [] 
 
 const petShop = document.querySelector('.pet-shop')
 const cartList = document.getElementById('cart-list')
@@ -50,6 +50,7 @@ for (let i = 0; i < PETS.length; i++) {
 
 // Обновляем отображение корзины
 function updateCartDisplay() {
+
   cartList.innerHTML = ''
 
   for (let i = 0; i < cart.length; i++) {
