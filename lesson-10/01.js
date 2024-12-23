@@ -5,7 +5,7 @@
 
 Пошаговый план реализации:
 
-1. Реализовать метод deleteMovie в объекте model:
+done 1. Реализовать метод deleteMovie в объекте model:
   - метод должен принимать id фильма, который необходимо удалить
   - метод должен удалить фильм из массива movies
   - метод должен обновить отображение фильмов на странице
@@ -30,6 +30,11 @@ const model = {
     view.renderMovies(this.movies)
   },
   // your code
+  deleteMovie(idMovie) {
+    this.movies = this.movies.filter((movie) => movie.id !== idMovie)
+
+    view.renderMovies(model.movies)
+  },
 }
 
 const view = {
@@ -51,6 +56,23 @@ const view = {
     })
 
     // your code
+    const list = document.querySelector('.list')
+
+    list.addEventListener('click', (event) => {
+      if (event.target.classList.contains('delete-button')){
+
+        const idMovie = +event.target.parentElement.id
+        controller.deleteMovie(idMovie)
+
+      }
+    })
+          // // 1. проверяем, что клик был по кнопке удаления
+          // if (event.target.classList.contains('delete-button')) {
+          //   const taskId = +event.target.parentElement.id
+          //   // 2. вызываем метод контроллера для удаления задачи
+          //   controller.deleteTask(taskId)
+          //   }
+
   },
   renderMovies(movies) {
     const list = document.querySelector('.list')
@@ -91,6 +113,9 @@ const controller = {
     }
   },
   // your code
+  deleteMovie(idMovie){
+    model.deleteMovie(idMovie)
+  }
 }
 
 function init() {
