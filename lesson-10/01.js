@@ -33,6 +33,7 @@ const model = {
   deleteMovie(idMovie) {
     this.movies = this.movies.filter((movie) => movie.id !== idMovie)
 
+
     view.renderMovies(model.movies)
   },
 }
@@ -66,12 +67,7 @@ const view = {
 
       }
     })
-          // // 1. проверяем, что клик был по кнопке удаления
-          // if (event.target.classList.contains('delete-button')) {
-          //   const taskId = +event.target.parentElement.id
-          //   // 2. вызываем метод контроллера для удаления задачи
-          //   controller.deleteTask(taskId)
-          //   }
+
 
   },
   renderMovies(movies) {
@@ -115,6 +111,7 @@ const controller = {
   // your code
   deleteMovie(idMovie){
     model.deleteMovie(idMovie)
+    view.displayMessage('Фильм успешно удалён!')
   }
 }
 
